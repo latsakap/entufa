@@ -109,35 +109,3 @@ quantifier -> "seven" {% id %}
 quantifier -> "eight" {% id %}
 quantifier -> "nine" {% id %}
 quantifier -> "ten" {% id %}
-
-##TEST DICTIONARY
-
-#gave
-verb -> "gave" {% id %}
-
-#give
-infinitive -> "give" {% id %}
-verb -> "give" {% id %}
-
-#given
-past_participle -> "given" {% id %}
-
-#good
-adjective -> "good" {% id %}
-
-#had
-past_participle -> "had" {% id %}
-verb -> "had" {% id %}
-
-#have
-infinitive -> "have" {% id %}
-verb -> "have" {% id %}
-
-#thing
-noun -> "thing" {% id %}
-
-#things
-noun -> "things" {% id %}
-
-#very
-adverb -> "very" {% id %}

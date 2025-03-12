@@ -1,4 +1,5 @@
 @include "core_dictionary3.ne"
+@include "main_dictionary3.ne"
 
 @{%
 function clean(data) {

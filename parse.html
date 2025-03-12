@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+ <title>Entufa Parser</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="styles.css">
+ <script src="nearley/lib/nearley.js"></script>
+ <script src="english3.js"></script>
+</head>
+<body>
+<textarea name="input" id="input" style="width:80%;resize:none;" rows="8">this is a test</textarea>
+<button style="float:right;font-size:4.5vw;height:131px;width:18%;" onclick="process()">Parse</button>
+<p id="output" style="margin-left:10%;margin-right:10%;border:3px solid lightgray;">test</p>
+
+
+<script>
+let input, output;
+
+function process() {
+input = document.getElementById("input").value;
+const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
+parser.feed(input);
+output = JSON.stringify(parser.results);
+document.getElementById("output").innerHTML = output;
+}
+</script>
+</body>
+</html>

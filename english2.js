@@ -5,7 +5,7 @@ function id(x) { return x[0]; }
 var grammar = {
     Lexer: undefined,
     ParserRules: [
-    {"name": "possessive_suffix", "symbols": [/[']/, {"literal":"s"}], "postprocess":  
+    {"name": "possessive_suffix", "symbols": [{"literal":"'"}, {"literal":"s"}], "postprocess":  
         function(data) {
         return {id: data[0], node: {type: "suffix"}, probability: 502}
         }},

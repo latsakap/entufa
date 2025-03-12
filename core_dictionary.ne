@@ -1,6 +1,6 @@
 ###THE BIG DICTIONARY###
 
-possessive_suffix -> ['] "s" {% 
+possessive_suffix -> "'" "s" {% 
 function(data) {
 return {id: data[0], node: {type: "suffix"}, probability: 502}
 }%}
