@@ -72,7 +72,7 @@ whitespace, or transform the results into a custom JavaScript object.
 
 For this purpose, each rule can have a *postprocessor*: a JavaScript function
 that transforms the array and returns a "processed" version of the result.
-Postprocessors are wrapped in `{%` `%}`s:
+Postprocessors are wrapped in curley braces outside percent signs:
 
 ```ne
 expression -> number "+" number {%
