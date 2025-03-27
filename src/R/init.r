@@ -1,0 +1,15 @@
+rm(list = ls())
+
+library(readr)
+library(Rcpp)
+library(tibble)
+library(dplyr)
+library(foreach)
+library(future)
+library(doFuture)
+library(parallel)
+library(progressr)
+library(beepr)
+
+sourceCpp("get_ngrams.cpp")
+sourceCpp("get_data.cpp")
