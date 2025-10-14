@@ -1,309 +1,314 @@
 #POS #ARROW #WORD #POSTPROCESSOR
 
-coordinating_conjunction -> "and" {%id%}
-coordinating_conjunction -> "but" {%id%}
-coordinating_conjunction -> "or" {%id%}
+coordinating_conjunction -> "and" {%(data)=>["coor.conj.",id(data)]%}
+coordinating_conjunction -> "but" {%(data)=>["coor.conj.",id(data)]%}
+coordinating_conjunction -> "or" {%(data)=>["coor.conj.",id(data)]%}
 
-#subordinating_conjunction -> "as" {%id%}
-subordinating_conjunction -> "that" {%id%}
+subordinating_conjunction -> "that" {% (data) => ["sub.conj.",id(data)]%}
 #subordinating_conjunction -> "which" {%id%}
 
-copula -> "be" {%id%}
-copula -> "been" {%id%}
-copula -> "am" {%id%}
-copula -> "are" {%id%}
-copula -> "aren't" {%id%}
-copula -> "is" {%id%}
-copula -> "isn't" {%id%}
-copula -> "was" {%id%}
-copula -> "wasn't" {%id%}
-copula -> "were" {%id%}
-copula -> "weren't" {%id%}
+copula -> "be" {%(data)=>["copula",id(data)]%}
+copula -> "been" {%(data)=>["copula",id(data)] %}
+copula -> "am" {%(data)=>["copula",id(data)]%}
+copula -> "are" {%(data)=>["copula",id(data)]%}
+copula -> "aren't" {%(data)=>["copula",id(data)]%}
+copula -> "is" {%(data)=>["copula",id(data)]%}
+copula -> "isn't" {%(data)=>["copula",id(data)]%}
+copula -> "was" {%(data) =>["copula",id(data)] %}
+copula -> "wasn't" {%(data)=>["copula",id(data)]%}
+copula -> "were" {%(data)=>["copula",id(data)]%}
+copula -> "weren't" {%(data)=>["copula",id(data)]%}
 
-determiner -> "that" {%id%}
-determiner -> "these" {%id%}
-determiner -> "this" {%id%}
-determiner -> "those" {%id%}
+determiner -> "that" {%(data)=>["determiner",id(data)]%}
+determiner -> "these" {%(data)=>["determiner",id(data)]%}
+determiner -> "this"  {%(data)=>["determiner",id(data)]%}
+determiner -> "those"  {%(data)=>["determiner",id(data)]%}
 
-determiner -> "a" {%id%}
-determiner -> "an" {%id%}
-determiner -> "the" {%id%}
-determiner -> "my" {%id%}
-determiner -> "your" {%id%}
-determiner -> "her" {%id%}
-determiner -> "their" {%id%}
-determiner -> "his" {%id%}
-determiner -> "its" {%id%}
-determiner -> "our" {%id%}
+determiner -> "a" {%(data)=>["determiner",id(data)]%}
+determiner -> "an" {%(data)=>["determiner",id(data)]%}
+determiner -> "the" {%(data)=>["determiner",id(data)]%}
+determiner -> "my" {%(data)=>["determiner",id(data)]%}
+determiner -> "your" {%(data)=>["determiner",id(data)]%}
+determiner -> "her" {%(data)=>["determiner",id(data)]%}
+determiner -> "their" {%(data)=>["determiner",id(data)]%}
+determiner -> "his" {%(data)=>["determiner",id(data)]%}
+determiner -> "its" {%(data)=>["determiner",id(data)]%}
+determiner -> "our" {%(data)=>["determiner",id(data)]%}
 
-AS -> "as" {%id%}
-DID -> "did" {%id%}
-DO -> "do" {%id%} | "does" {%id%}
-NOT -> "not" {%id%}
-OF -> "of" {%id%}
-TO -> "to" {%id%}
-WILL -> "will" {%id%} | "won't" {%id%}
-WOULD -> "would" {%id%} | "wouldn't" {%id%}
+AS -> "as" {%(data)=>["AS",id(data)]%}
+DID -> "did" {%(data)=>["DID",id(data)]%}
+DIDNT -> "didn't" {%(data)=>["DIDNT",id(data)]%}
+DO -> "do" {%(data)=>["DO",id(data)]%} 
+DO -> "does" {%(data)=>["DO",id(data)]%}
+DONT -> "don't" {%(data)=>["DONT",id(data)]%} 
+DONT -> "doesn't" {%(data)=>["DONT",id(data)]%}
+NOT -> "not" {%(data)=>["NOT",id(data)]%}
+OF -> "of" {%(data)=>["OF",id(data)]%}
+TO -> "to" {%(data)=>["TO",id(data)]%}
+WILL -> "will" {%(data)=>["WILL",id(data)]%}
+WONT -> "won't" {%(data)=>["WONT",id(data)]%}
+WOULD -> "would" {%(data)=>["WOULD",id(data)]%}
+WOULDNT -> "wouldn't" {%(data)=>["WOULDNT",id(data)]%}
 
-present_perfective -> "have" {%id%}
-present_perfective -> "haven't" {%id%}
-present_perfective -> "has" {%id%}
-present_perfective -> "hasn't" {%id%}
-past_perfective -> "had" {%id%}
-past_perfective -> "hadn't" {%id%}
+adverb -> "not" {%(data)=>["adverb",id(data)]%}
 
-possessive -> "mine" {%id%}
-possessive -> "yours" {%id%}
-possessive -> "hers" {%id%}
-possessive -> "theirs" {%id%}
-possessive -> "his" {%id%}
-possessive -> "ours" {%id%}
+present_perfective -> "have" {%(data)=>["pres.perf.",id(data)]%}
+present_perfective -> "haven't" {%(data)=>["pres.perf.",id(data)]%}
+present_perfective -> "has" {%(data)=>["pres.perf.",id(data)]%}
+present_perfective -> "hasn't" {%(data)=>["pres.perf.",id(data)]%}
+past_perfective -> "had" {%(data)=>["past-perf.",id(data)]%}
+past_perfective -> "hadn't" {%(data) =>["past-perf.",id(data)]%}
 
-preposition -> "at" {%id%}
-preposition -> "by" {%id%}
-preposition -> "for" {%id%}
-preposition -> "from" {%id%}
-preposition -> "in" {%id%}
-preposition -> "of" {%id%}
-preposition -> "on" {%id%}
-preposition -> "to" {%id%}
-preposition -> "with" {%id%}
+possessive -> "mine" {%(data)=>["possessive",id(data)]%}
+possessive -> "yours"  {%(data)=>["possessive",id(data)]%}
+possessive -> "hers"  {%(data)=>["possessive",id(data)]%}
+possessive -> "theirs"  {%(data)=>["possessive",id(data)]%}
+possessive -> "his"  {%(data)=>["possessive",id(data)]%}
+possessive -> "ours"  {%(data)=>["possessive",id(data)]%}
 
-pronoun -> "that" {%id%}
-pronoun -> "these" {%id%}
-pronoun -> "this" {%id%}
-pronoun -> "those" {%id%}
+preposition -> "at" {%(data)=>["preposition",id(data)]%}
+preposition -> "by" {%(data)=>["preposition",id(data)]%}
+preposition -> "for" {%(data)=>["preposition",id(data)]%}
+preposition -> "from" {%(data)=>["preposition",id(data)]%}
+preposition -> "in" {%(data)=>["preposition",id(data)]%}
+preposition -> "of" {%(data)=>["preposition",id(data)]%}
+preposition -> "on" {%(data)=>["preposition",id(data)]%}
+preposition -> "to" {%(data)=>["preposition",id(data)]%}
+preposition -> "with" {%(data)=>["preposition",id(data)]%}
 
-pronoun -> "here" {%id%}
-adverb -> "here" {%id%}
-adjective -> "here" {%id%}
-pronoun -> "there" {%id%}
-adjective -> "there" {%id%}
-adverb -> "there" {%id%}
+pronoun -> "that" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "these" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "this" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "those" {%(data)=>["pronoun",id(data)]%}
 
-pronoun -> "i" {%id%}
-pronoun -> "me" {%id%}
-pronoun -> "we" {%id%}
-pronoun -> "us" {%id%}
-pronoun -> "you" {%id%}
-pronoun -> "she" {%id%}
-pronoun -> "her" {%id%}
-pronoun -> "they" {%id%}
-pronoun -> "them" {%id%}
-pronoun -> "he" {%id%}
-pronoun -> "him" {%id%}
-pronoun -> "it" {%id%}
+pronoun -> "here" {%(data)=>["pronoun",id(data)]%}
+adverb -> "here" {%(data)=>["adverb",id(data)]%}
+adjective -> "here" {%(data)=>["adjective",id(data)]%}
+pronoun -> "there" {%(data)=>["pronoun",id(data)]%}
+adjective -> "there" {%(data)=>["adjective",id(data)]%}
+adverb -> "there" {%(data)=>["adverb",id(data)]%}
 
-interrogative-> "who" {%id%}
-pronoun -> "who" {%id%}
-interrogative -> "what" {%id%}
-pronoun -> "what" {%id%}
-interrogative-> "which" {%id%}
-pronoun -> "which" {%id%}
-interrogative-> "when" {%id%}
-pronoun -> "when" {%id%}
-adverb -> "when" {%id%}
-interrogative-> "where" {%id%}
-pronoun -> "where" {%id%}
-adverb -> "where" {%id%}
-interrogative -> "why" {%id%}
-pronoun -> "why" {%id%}
-adverb -> "why" {%id%}
-interrogative -> "how" {%id%}
-pronoun -> "how" {%id%}
-adverb -> "how" {%id%}
+pronoun -> "i" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "me" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "we" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "us" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "you" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "she" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "her" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "they" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "them" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "he" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "him" {%(data)=>["pronoun",id(data)]%}
+pronoun -> "it" {%(data)=>["pronoun",id(data)]%}
 
-quantifier -> "all" {%id%}
-quantifier -> "most" {%id%}
-quantifier -> "many" {%id%}
-quantifier -> "some" {%id%}
-quantifier -> "few" {%id%}
-quantifier -> "none" {%id%}
+interrogative-> "who" {%(data)=>["interrogative",id(data)]%}
+pronoun -> "who" {%(data)=>["pronoun",id(data)]%}
+interrogative -> "what" {%(data)=>["interrogative",id(data)]%}
+pronoun -> "what" {%(data)=>["pronoun",id(data)]%}
+interrogative-> "which" {%(data)=>["interrogative",id(data)]%}
+pronoun -> "which" {%(data)=>["pronoun",id(data)]%}
+interrogative-> "when" {%(data)=>["interrogative",id(data)]%}
+pronoun -> "when" {%(data)=>["pronoun",id(data)]%}
+adverb -> "when" {%(data)=>["adverb",id(data)]%}
+interrogative-> "where" {%(data)=>["interrogative",id(data)]%}
+pronoun -> "where" {%(data)=>["pronoun",id(data)]%}
+adverb -> "where" {%(data)=>["adverb",id(data)]%}
+interrogative -> "why" {%(data)=>["interrogative",id(data)]%}
+pronoun -> "why" {%(data)=>["pronoun",id(data)]%}
+adverb -> "why" {%(data)=>["adverb",id(data)]%}
+interrogative -> "how" {%(data)=>["interrogative",id(data)]%}
+pronoun -> "how" {%(data)=>["pronoun",id(data)]%}
+adverb -> "how" {%(data)=>["adverb",id(data)]%}
 
-quantifier -> "zero" {%id%}
-quantifier -> "one" {%id%}
-quantifier -> "two" {%id%}
-quantifier -> "three" {%id%}
-quantifier -> "four" {%id%}
-quantifier -> "five" {%id%}
-quantifier -> "six" {%id%}
-quantifier -> "seven" {%id%}
-quantifier -> "eight" {%id%}
-quantifier -> "nine" {%id%}
-quantifier -> "ten" {%id%}
+quantifier -> "all" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "most" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "many" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "some" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "few" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "none" {%(data)=>["quantifier",id(data)]%}
+
+quantifier -> "zero" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "one" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "two" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "three" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "four" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "five" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "six" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "seven" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "eight" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "nine" {%(data)=>["quantifier",id(data)]%}
+quantifier -> "ten" {%(data)=>["quantifier",id(data)]%}
 
 
 
-preposition -> "about" {%id%}
+preposition -> "about" {%(data)=>["preposition",id(data)]%}
 
-preposition -> "above" {%id%}
+preposition -> "above" {%(data)=>["preposition",id(data)]%}
 
-preposition -> "across" {%id%}
+preposition -> "across" {%(data)=>["preposition",id(data)]%}
 
-verb -> "act" {%id%}
-copula -> "act" {%id%}
-noun -> "act" {%id%}
-verb -> "acted" {%id%}
-verb -> "acting" {%id%}
-adjective -> "acting" {%id%}
-noun -> "actor" {%id%}
-noun -> "actors" {%id%}
-verb -> "acts" {%id%}
-noun -> "acts" {%id%}
+verb -> "act" {%(data)=>["verb",id(data)]%}
+copula -> "act" {%(data)=>["copula",id(data)]%}
+noun -> "act" {%(data)=>["noun",id(data)]%}
+verb -> "acted" {%(data)=>["verb",id(data)]%}
+verb -> "acting" {%(data)=>["verb",id(data)]%}
+adjective -> "acting" {%(data)=>["adjective",id(data)]%}
+noun -> "actor" {%(data)=>["noun",id(data)]%}
+noun -> "actors" {%(data)=>["noun",id(data)]%}
+verb -> "acts" {%(data)=>["verb",id(data)]%}
+noun -> "acts" {%(data)=>["noun",id(data)]%}
 
-verb -> "activate" {%id%}
-verb -> "activated" {%id%}
-adjective -> "activated" {%id%}
-verb -> "activates" {%id%}
-verb -> "activating" {%id%}
-adjective -> "activating" {%id%}
-noun -> "activator" {%id%}
-noun -> "activators" {%id%}
-adjective -> "active" {%id%}
-adverb -> "actively" {%id%}
-noun -> "activism" {%id%}
-noun -> "activisms" {%id%}
-noun -> "activist" {%id%}
-noun -> "activists" {%id%}
+verb -> "activate" {%(data)=>["verb",id(data)]%}
+verb -> "activated" {%(data)=>["verb",id(data)]%}
+adjective -> "activated" {%(data)=>["adjective",id(data)]%}
+verb -> "activates" {%(data)=>["verb",id(data)]%}
+verb -> "activating" {%(data)=>["verb",id(data)]%}
+adjective -> "activating" {%(data)=>["adjective",id(data)]%}
+noun -> "activator" {%(data)=>["noun",id(data)]%}
+noun -> "activators" {%(data)=>["noun",id(data)]%}
+adjective -> "active" {%(data)=>["adjective",id(data)]%}
+adverb -> "actively" {%(data)=>["adverb",id(data)]%}
+noun -> "activism" {%(data)=>["noun",id(data)]%}
+noun -> "activisms" {%(data)=>["noun",id(data)]%}
+noun -> "activist" {%(data)=>["noun",id(data)]%}
+noun -> "activists" {%(data)=>["noun",id(data)]%}
 
-noun -> "activity" {%id%}
-noun -> "activities" {%id%}
+noun -> "activity" {%(data)=>["noun",id(data)]%}
+noun -> "activities" {%(data)=>["noun",id(data)]%}
 
-verb -> "add" {%id%}
-verb -> "added" {%id%}
-adjective -> "added" {%id%}
-noun -> "adder" {%id%}
-noun -> "adders" {%id%}
-verb -> "adding" {%id%}
-noun -> "adding" {%id%}
-adjective -> "adding" {%id%}
-noun -> "addition" {%id%}
-adjective -> "additional" {%id%}
-adverb -> "additionally" {%id%}
-noun -> "additions" {%id%}
-verb -> "adds" {%id%}
+verb -> "add" {%(data)=>["verb",id(data)]%}
+verb -> "added" {%(data)=>["verb",id(data)]%}
+adjective -> "added" {%(data)=>["adjective",id(data)]%}
+noun -> "adder"  {%(data)=>["noun",id(data)]%}
+noun -> "adders"  {%(data)=>["noun",id(data)]%}
+verb -> "adding" {%(data)=>["verb",id(data)]%}
+noun -> "adding"  {%(data)=>["noun",id(data)]%}
+adjective -> "adding" {%(data)=>["adjective",id(data)]%}
+noun -> "addition"  {%(data)=>["noun",id(data)]%}
+adjective -> "additional" {%(data)=>["adjective",id(data)]%}
+adverb -> "additionally" {%(data)=>["adverb",id(data)]%}
+noun -> "additions"  {%(data)=>["noun",id(data)]%}
+verb -> "adds" {%(data)=>["verb",id(data)]%}
 
-adjective -> "afraid" {%id%}
+adjective -> "afraid" {%(data)=>["adjective",id(data)]%}
 
-adverb -> "after" {%id%}
-preposition -> "after" {%id%}
+adverb -> "after" {%(data)=>["adverb",id(data)]%}
+preposition -> "after" {%(data)=>["preposition",id(data)]%}
 
-adverb -> "again" {%id%}
+adverb -> "again" {%(data)=>["adverb",id(data)]%}
 
-preposition -> "against" {%id%}
+preposition -> "against" {%(data)=>["preposition",id(data)]%}
 
-verb -> "age" {%id%}
-noun -> "age" {%id%}
-verb -> "aged" {%id%}
-adjective -> "aged" {%id%}
-verb -> "ages" {%id%}
-noun -> "ages" {%id%}
-verb -> "aging" {%id%}
-noun -> "aging" {%id%}
-adjective -> "aging" {%id%}
+verb -> "age" {%(data)=>["verb",id(data)]%}
+noun -> "age"  {%(data)=>["noun",id(data)]%}
+verb -> "aged" {%(data)=>["verb",id(data)]%}
+adjective -> "aged" {%(data)=>["adjective",id(data)]%}
+verb -> "ages" {%(data)=>["verb",id(data)]%}
+noun -> "ages"  {%(data)=>["noun",id(data)]%}
+verb -> "aging" {%(data)=>["verb",id(data)]%}
+noun -> "aging"  {%(data)=>["noun",id(data)]%}
+adjective -> "aging" {%(data)=>["adjective",id(data)]%}
 
-postposition -> "ago" {%id%}
+postposition -> "ago" {%(data)=>["postposition",id(data)]%}
 
-verb -> "agree" {%id%}
-adjective -> "agreeable" {%id%}
-verb -> "agreed" {%id%}
-verb -> "agreeing" {%id%}
-adjective -> "agreeing" {%id%}
-noun -> "agreement" {%id%}
-noun -> "agreements" {%id%}
-adjective -> "agreed" {%id%}
-verb -> "agrees" {%id%}
+verb -> "agree" {%(data)=>["verb",id(data)]%}
+adjective -> "agreeable" {%(data)=>["adjective",id(data)]%}
+verb -> "agreed" {%(data)=>["verb",id(data)]%}
+verb -> "agreeing" {%(data)=>["verb",id(data)]%}
+adjective -> "agreeing" {%(data)=>["adjective",id(data)]%}
+noun -> "agreement"  {%(data)=>["noun",id(data)]%}
+noun -> "agreements"  {%(data)=>["noun",id(data)]%}
+adjective -> "agreed" {%(data)=>["adjective",id(data)]%}
+verb -> "agrees" {%(data)=>["verb",id(data)]%}
 
-noun -> "air" {%id%}
-noun -> "airs" {%id%}
+noun -> "air"  {%(data)=>["noun",id(data)]%}
+noun -> "airs"  {%(data)=>["noun",id(data)]%}
 
-adjective -> "alone" {%id%}
-adverb -> "alone" {%id%}
+adjective -> "alone" {%(data)=>["adjective",id(data)]%}
+adverb -> "alone" {%(data)=>["adverb",id(data)]%}
 
-preposition -> "along" {%id%}
+preposition -> "along" {%(data)=>["preposition",id(data)]%}
 
-adverb -> "already" {%id%}
+adverb -> "already" {%(data)=>["adverb",id(data)]%}
 
-adverb -> "always" {%id%}
+adverb -> "always" {%(data)=>["adverb",id(data)]%}
 
-verb -> "amount" {%id%}
-noun -> "amount" {%id%}
-verb -> "amounted" {%id%}
-verb -> "amounting" {%id%}
-adjective -> "amounting" {%id%}
-verb -> "amounts" {%id%}
-noun -> "amounts" {%id%}
+verb -> "amount" {%(data)=>["verb",id(data)]%}
+noun -> "amount"  {%(data)=>["noun",id(data)]%}
+verb -> "amounted" {%(data)=>["verb",id(data)]%}
+verb -> "amounting" {%(data)=>["verb",id(data)]%}
+verb -> "amounts" {%(data)=>["verb",id(data)]%}
+noun -> "amounts"  {%(data)=>["noun",id(data)]%}
 
-verb -> "anger" {%id%}
-noun -> "anger" {%id%}
-verb -> "angered" {%id%}
-adjective -> "angered" {%id%}
-verb -> "angering" {%id%}
-adjective -> "angering" {%id%}
-verb -> "angers" {%id%}
-adverb -> "angrily" {%id%}
-adjective -> "angry" {%id%}
+verb -> "anger" {%(data)=>["verb",id(data)]%}
+noun -> "anger"  {%(data)=>["noun",id(data)]%}
+verb -> "angered" {%(data)=>["verb",id(data)]%}
+adjective -> "angered" {%(data)=>["adjective",id(data)]%}
+verb -> "angering" {%(data)=>["verb",id(data)]%}
+adjective -> "angering" {%(data)=>["adjective",id(data)]%}
+verb -> "angers" {%(data)=>["verb",id(data)]%}
+adverb -> "angrily" {%(data)=>["adverb",id(data)]%}
+adjective -> "angry" {%(data)=>["adjective",id(data)]%}
 
-quantifier -> "another" {%id%}
+quantifier -> "another" {%(data)=>["quantifier",id(data)]%}
 
-adjective -> "bad" {%id%}
-adverb -> "badly" {%id%}
+adjective -> "bad" {%(data)=>["adjective",id(data)]%}
+adverb -> "badly" {%(data)=>["adverb",id(data)]%}
 
-verb -> "did" {%id%}
-verb -> "do" {%id%}
-noun -> "do" {%id%}
-noun -> "doer" {%id%}
-noun -> "doers" {%id%}
-verb -> "does" {%id%}
-verb -> "doing" {%id%}
-noun -> "doing" {%id%}
-adjective -> "doing" {%id%}
-verb -> "done" {%id%}
-adjective -> "done" {%id%}
+verb -> "did" {%(data)=>["verb",id(data)]%}
+verb -> "do" {%(data)=>["verb",id(data)]%}
+noun -> "do"  {%(data)=>["noun",id(data)]%}
+noun -> "doer"  {%(data)=>["noun",id(data)]%}
+noun -> "doers"  {%(data)=>["noun",id(data)]%}
+verb -> "does" {%(data)=>["verb",id(data)]%}
+verb -> "doing" {%(data)=>["verb",id(data)]%}
+noun -> "doing"  {%(data)=>["noun",id(data)]%}
+verb -> "done" {%(data)=>["verb",id(data)]%}
+adjective -> "done" {%(data)=>["adjective",id(data)]%}
 
-verb -> "gave" {%id%}
-verb -> "gift" {%id%}
-noun -> "gift" {%id%}
-verb -> "gifted" {%id%}
-adjective -> "gifted" {%id%}
-verb -> "gifting" {%id%}
-noun -> "gifting" {%id%}
-adjective -> "gifting" {%id%}
-verb -> "gifts" {%id%}
-noun -> "gifts" {%id%}
-verb -> "give" {%id%}
-verb -> "given" {%id%}
-adjective -> "given" {%id%}
-noun -> "giver" {%id%}
-verb -> "gives" {%id%}
-verb -> "giving" {%id%}
+verb -> "gave" {%(data)=>["verb",id(data)]%}
+verb -> "gift" {%(data)=>["verb",id(data)]%}
+noun -> "gift" {%(data)=>["noun",id(data)]%}
+verb -> "gifted" {%(data)=>["verb",id(data)]%}
+adjective -> "gifted" {%(data)=>["adjective",id(data)]%}
+verb -> "gifting" {%(data)=>["verb",id(data)]%}
+noun -> "gifting" {%(data)=>["noun",id(data)]%}
+adjective -> "gifting" {%(data)=>["adjective",id(data)]%}
+verb -> "gifts" {%(data)=>["verb",id(data)]%}
+noun -> "gifts" {%(data)=>["noun",id(data)]%}
+verb -> "give" {%(data)=>["verb",id(data)]%}
+verb -> "given" {%(data)=>["verb",id(data)]%}
+adjective -> "given" {%(data)=>["adjective",id(data)]%}
+noun -> "giver" {%(data)=>["noun",id(data)]%}
+verb -> "gives" {%(data)=>["verb",id(data)]%}
+verb -> "giving" {%(data)=>["verb",id(data)]%}
 
-adjective -> "good" {%id%}
+adjective -> "good" {%(data)=>["adjective",id(data)]%}
 
-verb -> "had" {%id%}
-verb -> "has" {%id%}
-verb -> "have" {%id%}
-noun -> "haver" {%id%}
-verb -> "having" {%id%}
+verb -> "had" {%(data)=>["verb",id(data)]%}
+verb -> "has" {%(data)=>["verb",id(data)]%}
+verb -> "have" {%(data)=>["verb",id(data)]%}
+noun -> "haver" {%(data)=>["noun",id(data)]%}
+verb -> "having" {%(data)=>["verb",id(data)]%}
 
-noun -> "test" {%id%}
-verb -> "test" {%id%}
-adjective -> "testable" {%id%}
-verb -> "tested" {%id%}
-adjective -> "tested" {%id%}
-noun -> "tester" {%id%}
-noun -> "testers" {%id%}
-verb -> "testing" {%id%}
-noun -> "testing" {%id%}
-adjective -> "testing" {%id%}
-verb -> "tests" {%id%}
-noun -> "tests" {%id%}
+noun -> "test" {%(data)=>["noun",id(data)]%}
+verb -> "test" {%(data)=>["verb",id(data)]%}
+adjective -> "testable" {%(data)=>["adjective",id(data)]%}
+verb -> "tested" {%(data)=>["verb",id(data)]%}
+adjective -> "tested" {%(data)=>["adjective",id(data)]%}
+noun -> "tester" {%(data)=>["noun",id(data)]%}
+noun -> "testers" {%(data)=>["noun",id(data)]%}
+verb -> "testing" {%(data)=>["verb",id(data)]%}
+noun -> "testing" {%(data)=>["noun",id(data)]%}
+adjective -> "testing" {%(data)=>["adjective",id(data)]%}
+verb -> "tests" {%(data)=>["verb",id(data)]%}
+noun -> "tests" {%(data)=>["noun",id(data)]%}
 
-noun -> "thing" {%id%}
-noun -> "things" {%id%}
+noun -> "thing" {%(data)=>["noun",id(data)]%}
+noun -> "things" {%(data)=>["noun",id(data)]%}
 
-adverb -> "very" {%id%}
+adverb -> "very" {%(data)=>["adverb",id(data)]%}
 
-adverb -> "well" {%id%}
+adverb -> "well" {%(data)=>["adverb",id(data)]%}
 
-exclamation -> "wow" {%id%}
+exclamation -> "wow" {%(data)=>["exclamation",id(data)]%}
