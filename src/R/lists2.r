@@ -1,5 +1,5 @@
 #parse lexicon
-lexicon <- read_table("../dictionary3.ne")
+lexicon <- read_table("../parse_dict.ne")
 lexicon$`#POS` <- factor(lexicon$`#POS`)
 
 #remove quotes
@@ -9,7 +9,7 @@ words <- foreach(x = lexicon$`#WORD`, .combine = c) %dofuture% {gsub("\"", "", x
 POS <- foreach(x = lexicon$`#POS`, .combine = c) %dofuture% {
 if (x == "noun") {
 "NOUN"
-} else if (x == "copula" || x == "infinitive_copula" || x == "past_participle_copula" || x == "verb" || x == "infinitive" || x == "past_participle") {
+} else if (x == "copula" || x == "infinitive_copula" || x == "past_participle_copula" || x == "verb" || x == "past_participle") {
 "VERB"
 } else if (x == "adjective" || x == "quantifier") {
 "ADJ"
