@@ -573,7 +573,6 @@ var grammar = {
     {"name": "tail", "symbols": ["copula_core", "_", "copula_arguments"], "postprocess": (data) => ["tail", clean(data)]},
     {"name": "tail", "symbols": ["tail", "_", "adverb_phrase"], "postprocess": (data) => ["tail", clean(data)]},
     {"name": "tail", "symbols": ["tail", "_", "prepositional_phrase"], "postprocess": (data) => ["tail", clean(data)]},
-    {"name": "tail", "symbols": ["prepositional_phrase"], "postprocess": (data) => ["tail", id(data)]},
     {"name": "tail", "symbols": ["tail", "_", "coordinating_conjunction", "_", "tail"], "postprocess": (data) => ["tail", clean(data)]},
     {"name": "copula_arguments", "symbols": ["adjective_phrase"], "postprocess": (data) => ["copula arguments", id(data)]},
     {"name": "copula_arguments", "symbols": ["adjectival_AS_phrase"], "postprocess": (data) => ["copula arguments", id(data)]},

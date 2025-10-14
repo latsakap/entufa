@@ -61,7 +61,6 @@ tail -> copula_core {% (data) => ["tail", id(data)] %}
 tail -> copula_core _ copula_arguments {% (data) => ["tail", clean(data)] %}
 tail -> tail _ adverb_phrase {% (data) => ["tail", clean(data)] %}
 tail -> tail _ prepositional_phrase {% (data) => ["tail", clean(data)] %}
-tail -> prepositional_phrase {% (data) => ["tail", id(data)] %}
 tail -> tail _ coordinating_conjunction _ tail {% (data) => ["tail", clean(data)] %}
 
 #TAIL ARGUMENTS
