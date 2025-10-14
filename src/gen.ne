@@ -1,4 +1,4 @@
-@include "core_dictionary.ne"
+@include "gen_dict.ne"
 
 text -> sentence # | fragment
 

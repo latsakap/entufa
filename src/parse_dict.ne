@@ -10,6 +10,8 @@ subordinating_conjunction -> "which" {%id%}
 
 infinitive_copula -> "be" {%id%}
 past_participle_copula -> "been" {%id%}
+copula -> "be" {%id%}
+copula -> "been" {%id%}
 copula -> "am" {%id%}
 copula -> "are" {%id%}
 copula -> "is" {%id%}
@@ -34,7 +36,7 @@ determiner -> "our" {%id%}
 
 AS -> "as" {%id%}
 DID -> "did" {%id%}
-DO -> "do" {%id%}
+DO -> "do" {%id%} | "does" {%id%}
 NOT -> "not" {%id%}
 OF -> "of" {%id%}
 TO -> "to" {%id%}
@@ -107,31 +109,43 @@ quantifier -> "ten" {%id%}
 
 
 
+preposition -> "about" {%id%}
 
+preposition -> "above" {%id%}
+
+preposition -> "across" {%id%}
+
+infinitive_atom -> "act" {%id%}
+copula -> "act"  {%id%}
+
+adjective -> "active" {%id%}
+
+noun_y -> "activit" {%id%}
+
+infinitive_atom -> "add" {%id%}
 
 adjective -> "bad" {%id%}
 
+infinitive -> "do" {%id%}
+
+verb -> "does" {%id%}
+
 verb -> "gave" {%id%}
 
-infinitive -> "give" {%id%}
-verb -> "give" {%id%}
-
-past_participle -> "given" {%id%}
+infinitive_stem -> "giv" {%id%}
 
 adjective -> "good" {%id%}
 
 past_participle -> "had" {%id%}
 verb -> "had" {%id%}
 
-infinitive -> "have" {%id%}
-verb -> "have" {%id%}
+verb -> "has" {%id%}
 
-noun -> "test" {%id%}
+infinitive_stem -> "hav" {%id%}
 
-noun -> "tests" {%id%}
+noun_atom -> "test" {%id%}
+infinitive_atom -> "test" {%id%}
 
-noun -> "thing" {%id%}
-
-noun -> "things" {%id%}
+noun_atom -> "thing" {%id%}
 
 adverb -> "very" {%id%}
