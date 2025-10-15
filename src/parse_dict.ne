@@ -36,28 +36,36 @@ determiner -> "its" {%(data)=>["determiner",id(data)]%}
 determiner -> "our" {%(data)=>["determiner",id(data)]%}
 
 AS -> "as" {%(data)=>["AS",id(data)]%}
-DID -> "did" {%(data)=>["DID",id(data)]%}
-DIDNT -> "didn't" {%(data)=>["DIDNT",id(data)]%}
-DO -> "do" {%(data)=>["DO",id(data)]%} 
-DO -> "does" {%(data)=>["DO",id(data)]%}
-DONT -> "don't" {%(data)=>["DONT",id(data)]%} 
-DONT -> "doesn't" {%(data)=>["DONT",id(data)]%}
 NOT -> "not" {%(data)=>["NOT",id(data)]%}
 OF -> "of" {%(data)=>["OF",id(data)]%}
 TO -> "to" {%(data)=>["TO",id(data)]%}
-WILL -> "will" {%(data)=>["WILL",id(data)]%}
-WONT -> "won't" {%(data)=>["WONT",id(data)]%}
-WOULD -> "would" {%(data)=>["WOULD",id(data)]%}
-WOULDNT -> "wouldn't" {%(data)=>["WOULDNT",id(data)]%}
+
+DO -> "did" {%(data)=>["DO",id(data)]%}
+DO -> "didn't" {%(data)=>["DO",id(data)]%}
+DO -> "do" {%(data)=>["DO",id(data)]%} 
+DO -> "does" {%(data)=>["DO",id(data)]%}
+DO -> "don't" {%(data)=>["DO",id(data)]%} 
+DO -> "doesn't" {%(data)=>["DO",id(data)]%}
+
+aux_verb -> "did" {%(data)=>["aux.verb",id(data)]%}
+aux_verb -> "didn't" {%(data)=>["aux.verb",id(data)]%}
+aux_verb -> "do" {%(data)=>["aux.verb",id(data)]%} 
+aux_verb -> "does" {%(data)=>["aux.verb",id(data)]%}
+aux_verb -> "don't" {%(data)=>["aux.verb",id(data)]%} 
+aux_verb -> "doesn't" {%(data)=>["aux.verb",id(data)]%}
+aux_verb -> "will" {%(data)=>["aux.verb",id(data)]%}
+aux_verb -> "won't" {%(data)=>["aux.verb",id(data)]%}
+aux_verb -> "would" {%(data)=>["aux.verb",id(data)]%}
+aux_verb -> "wouldn't" {%(data)=>["aux.verb",id(data)]%}
 
 adverb -> "not" {%(data)=>["adverb",id(data)]%}
 
-present_perfective -> "have" {%(data)=>["pres.perf.",id(data)]%}
-present_perfective -> "haven't" {%(data)=>["pres.perf.",id(data)]%}
-present_perfective -> "has" {%(data)=>["pres.perf.",id(data)]%}
-present_perfective -> "hasn't" {%(data)=>["pres.perf.",id(data)]%}
-past_perfective -> "had" {%(data)=>["past-perf.",id(data)]%}
-past_perfective -> "hadn't" {%(data) =>["past-perf.",id(data)]%}
+perfective -> "have" {%(data)=>["perfective.",id(data)]%}
+perfective -> "haven't" {%(data)=>["perfective",id(data)]%}
+perfective -> "has" {%(data)=>["perfective",id(data)]%}
+perfective -> "hasn't" {%(data)=>["perfective",id(data)]%}
+perfective -> "had" {%(data)=>["perfective",id(data)]%}
+perfective -> "hadn't" {%(data) =>["perfective",id(data)]%}
 
 possessive -> "mine" {%(data)=>["possessive",id(data)]%}
 possessive -> "yours"  {%(data)=>["possessive",id(data)]%}

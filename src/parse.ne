@@ -34,14 +34,12 @@ sentence -> statement {% (data) => ["sentence", id(data)] %}
 statement -> head _ tail {% (data) => ["statement", clean(data)] %}
 statement -> statement _ coordinating_conjunction _ statement {% (data) => ["statement", clean(data)] %}
 
-question -> copula_core _ nominal_phrase {% (data) => ["question", clean(data)] %}
-question -> interrogative _ copula_core _ nominal_phrase {% (data) => ["question", clean(data)] %}
+question -> interrogative {% (data) => ["question", id(data)] %}
+question -> copula_phrase _ nominal_phrase {% (data) => ["question", clean(data)] %}
+question -> copula_phrase _ nominal_phrase _ copula_arguments {% (data) => ["question", clean(data)] %}
+question -> interrogative _ copula_phrase _ nominal_phrase {% (data) => ["question", clean(data)] %}
 question -> DO _ nominal_phrase _ tail {% (data) => ["question", clean(data)] %}
-question -> DID _ nominal_phrase _ tail {% (data) => ["question", clean(data)] %}
 question -> interrogative _ DO _ nominal_phrase _ tail {% (data) => ["question", clean(data)] %}
-question -> interrogative _ DID _ nominal_phrase _ tail {% (data) => ["question", clean(data)] %}
-question -> copula_core _ nominal_phrase _ copula_arguments {% (data) => ["question", clean(data)] %}
-question -> interrogative _ copula_core _ nominal_phrase {% (data) => ["question", clean(data)] %}
 
 command -> tail {% (data) => ["command", clean(data)] %}
 
@@ -59,6 +57,7 @@ tail -> tail_core _ end_phrases {% (data) => ["tail", clean(data)] %}
 
 #TAIL CORE
 
+tail_core -> aux_phrase {% (data) => ["tail_core", id(data)] %}
 tail_core -> verb_phrase {% (data) => ["tail_core", id(data)] %}
 tail_core -> verb_phrase _ arguments {% (data) => ["tail_core", clean(data)] %}
 tail_core -> copula_core {% (data) => ["tail_core", id(data)] %}
@@ -95,9 +94,6 @@ property_subclause -> interrogative _ tail {% (data) => ["property subclause", c
 
 property_subclause -> property_subclause _ prepositional_phrase {% (data) => ["property subclause", clean(data)] %}
 property_subclause -> property_subclause _ coordinating_conjunction _ property_subclause {% (data) => ["property subclause", clean(data)] %}
-
-#copula_base -> head _ copula {% (data) => clean(data) %}
-#verb_base -> head _ verbal {% (data) => clean(data) %}
 
 nominal_subclause -> tail {% (data) => ["nominal subclause", id(data)] %}
 nominal_subclause -> subordinating_conjunction _ statement {% (data) => ["nominal subclause", clean(data)] %}
@@ -136,59 +132,44 @@ verbal -> verb {% (data) => ["verbal", id(data)] %}
 verbal -> adverb_phrase _ verb {% (data) => ["nominal phrase", clean(data)] %}
 
 verb_phrase -> verbal {% (data) => ["verb phrase", id(data)] %}
-
-verb_phrase -> DO _ NOT _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> DONT _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> DID _ NOT _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> DIDNT _ verbal {% (data) => ["verb phrase", clean(data)] %}
-
-verb_phrase -> WILL _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WILL _ NOT _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WONT _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WILL _ present_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WILL _ NOT _ present_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WONT _ present_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-
-verb_phrase -> WOULD _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WOULD _ NOT _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WOULDNT _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WOULD _ present_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WOULD _ NOT _ present_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> WOULDNT _ present_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-
-verb_phrase -> present_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> adverb_phrase _ present_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-
-verb_phrase -> past_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-verb_phrase -> adverb_phrase _ past_perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
-
-verb_phrase -> copula_core _ verbal {% (data) => ["verb phrase", clean(data)] %}
-
 verb_phrase -> adverb_phrase _ verbal {% (data) => ["verb phrase", clean(data)] %}
+
+verb_phrase -> aux_phrase _ verbal {% (data) => ["verb phrase", clean(data)] %}
+verb_phrase -> adverb_phrase _ aux_phrase _ verbal {% (data) => ["verb phrase", clean(data)] %}
+
+verb_phrase -> perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
+verb_phrase -> adverb_phrase _ perfective _ verbal {% (data) => ["verb phrase", clean(data)] %}
+
+verb_phrase -> copula_phrase _ verbal {% (data) => ["verb phrase", clean(data)] %}
+verb_phrase -> adverb_phrase _ copula_phrase _ verbal {% (data) => ["verb phrase", clean(data)] %}
+
 verb_phrase -> verbal _ coordinating_conjunction _ verbal {% (data) => ["verb phrase", clean(data)] %}
+
+aux_phrase -> aux_verb {% (data) => ["aux. phrase", id(data)] %}
+aux_phrase -> aux_verb _ NOT {% (data) => ["aux. phrase", clean(data)] %}
 
 #COPULA
 
+copula_phrase -> copula_core {% (data) => ["copula phrase", id(data)] %}
+copula_phrase -> adverb_phrase _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+
+copula_phrase -> copula_core _ NOT {% (data) => ["copula phrase", clean(data)] %}
+copula_phrase -> adverb_phrase _ copula_core _ NOT {% (data) => ["copula phrase", clean(data)] %}
+
+copula_phrase -> aux_phrase _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+copula_phrase -> adverb_phrase _ aux_phrase _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+
+copula_phrase -> perfective _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+copula_phrase -> aux_phrase _ perfective _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+copula_phrase -> perfective _ NOT _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+copula_phrase -> aux_phrase _ perfective _ NOT _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+copula_phrase -> adverb_phrase _ perfective _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+copula_phrase -> aux_phrase _ adverb_phrase _ perfective _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+copula_phrase -> adverb_phrase _ perfective _ NOT _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+copula_phrase -> aux_phrase _ adverb_phrase _ perfective _ NOT _ copula_core {% (data) => ["copula phrase", clean(data)] %}
+
 copula_core -> copula {% (data) => ["copula core", id(data)] %}
-copula_core -> copula _ NOT {% (data) => ["copula core", clean(data)] %}
-
-copula_core -> WILL _ copula {% (data) => ["copula core", clean(data)] %}
-copula_core -> WILL _ NOT _ copula {% (data) => ["copula core", clean(data)] %}
-
-copula_core -> WILL _ present_perfective _ copula {% (data) => ["copula core", clean(data)] %}
-copula_core -> WILL _ NOT _ present_perfective _ copula {% (data) => ["copula core", clean(data)] %}
-
-copula_core -> WOULD _ copula {% (data) => ["copula core", clean(data)] %}
-copula_core -> WOULD _ NOT _ copula {% (data) => ["copula core", clean(data)] %}
-
-copula_core -> WOULD _ present_perfective _ copula {% (data) => ["copula core", clean(data)] %}
-copula_core -> WOULD _ NOT _ present_perfective _ copula {% (data) => ["copula core", clean(data)] %}
-
-copula_core -> present_perfective _ copula {% (data) => ["copula core", clean(data)] %}
-copula_core -> present_perfective _ NOT _ copula {% (data) => ["copula core", clean(data)] %}
-
-copula_core -> past_perfective _ copula {% (data) => ["copula core", clean(data)] %}
-copula_core -> past_perfective _ NOT _ copula {% (data) => ["copula core", clean(data)] %}
+copula_core -> adverb_phrase _ copula {% (data) => ["copula core", clean(data)] %}
 
 #ADJECTIVES
 
