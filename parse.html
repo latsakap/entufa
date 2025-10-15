@@ -10,19 +10,46 @@
 <body>
 <textarea name="input" id="input" style="width:80%;resize:none;" rows="8">this is a test</textarea>
 <button style="float:right;font-size:4.5vw;height:131px;width:18%;" onclick="process()">Parse</button>
+<button onclick="pageLeft()">Prev.</button><button onclick="pageRight()">Next</button><h2>Parse <span id="pageNum">*</span>/<span id="parseNum">*</span></h2> 
 <p id="output" style="margin-left:10%;margin-right:10%;border:3px solid lightgray;">test</p>
 
 
 <script>
-let input, output;
+let input, results, output;
+let page = 0;
 
 function process() {
 input = document.getElementById("input").value;
 const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
+try {
 parser.feed(input);
-output = JSON.stringify(parser.results);
+results = parser.results;
+page = 0;
+print()
+} catch (error) {
+document.getElementById("pageNum").innerHTML = "*";
+document.getElementById("parseNum").innerHTML = "*";
+document.getElementById("output").innerHTML = error;
+}}
+
+function print() {
+document.getElementById("pageNum").innerHTML = page + 1;
+document.getElementById("parseNum").innerHTML = results.length;
+output =  JSON.stringify(results[page])
 document.getElementById("output").innerHTML = output;
 }
+
+function pageLeft() {
+if (page > 0) {
+page--;
+print()
+}}
+
+function pageRight() {
+if (page + 1 < results.length) {
+page++;
+print()
+}}
 </script>
 </body>
 </html>

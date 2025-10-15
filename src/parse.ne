@@ -32,7 +32,6 @@ sentence -> statement {% (data) => ["sentence", id(data)] %}
 | exclamatory {% (data) => ["sentence", id(data)] %}
 
 statement -> head _ tail {% (data) => ["statement", clean(data)] %}
-#statement -> statement _ prepositional_phrase {% (data) => ["statement", clean(data)] %}
 statement -> statement _ coordinating_conjunction _ statement {% (data) => ["statement", clean(data)] %}
 
 question -> copula_core _ nominal_phrase {% (data) => ["question", clean(data)] %}
@@ -55,13 +54,16 @@ head -> head _ coordinating_conjunction _ head {% (data) => ["head", clean(data)
 
 #SENTENCE TAIL
 
-tail -> verb_phrase {% (data) => ["tail", id(data)] %}
-tail -> verb_phrase _ arguments {% (data) => ["tail", clean(data)] %}
-tail -> copula_core {% (data) => ["tail", id(data)] %}
-tail -> copula_core _ copula_arguments {% (data) => ["tail", clean(data)] %}
-tail -> tail _ adverb_phrase {% (data) => ["tail", clean(data)] %}
-tail -> tail _ prepositional_phrase {% (data) => ["tail", clean(data)] %}
-tail -> tail _ coordinating_conjunction _ tail {% (data) => ["tail", clean(data)] %}
+tail -> tail_core {% (data) => ["tail", id(data)] %}
+tail -> tail_core _ end_phrases {% (data) => ["tail", clean(data)] %}
+
+#TAIL CORE
+
+tail_core -> verb_phrase {% (data) => ["tail_core", id(data)] %}
+tail_core -> verb_phrase _ arguments {% (data) => ["tail_core", clean(data)] %}
+tail_core -> copula_core {% (data) => ["tail_core", id(data)] %}
+tail_core -> copula_core _ copula_arguments {% (data) => ["tail_core", clean(data)] %}
+tail_core -> tail _ coordinating_conjunction _ tail {% (data) => ["tail_core", clean(data)] %}
 
 #TAIL ARGUMENTS
 
@@ -69,22 +71,26 @@ copula_arguments -> adjective_phrase {% (data) => ["copula arguments", id(data)]
 copula_arguments -> adjectival_AS_phrase {% (data) => ["copula arguments", id(data)] %}
 copula_arguments -> nominal_phrase {% (data) => ["copula arguments", id(data)] %}
 copula_arguments -> prepositional_phrase {% (data) => ["copula arguments", id(data)] %}
-copula_arguments -> copula_arguments _ prepositional_phrase {% (data) => ["copula arguments", clean(data)] %}
-copula_arguments -> copula_arguments _ adverb_phrase {% (data) => ["copula arguments", clean(data)] %}
 
 arguments -> nominal_phrase {% (data) => ["arguments", id(data)] %}
 arguments -> nominal_phrase _ nominal_phrase {% (data) => ["arguments", clean(data)] %}
 arguments -> nominal_phrase _ nominal_phrase _ nominal_phrase {% (data) => ["arguments", clean(data)] %}
-arguments -> arguments _ prepositional_phrases {% (data) => ["arguments", clean(data)] %}
+
+#END PHRASES
+
+end_phrases -> end_phrase {% (data) => ["end phrases", id(data)] %}
+end_phrases -> end_phrase _ end_phrases {% (data) => ["end phrases", clean(data)] %}
+end_phrase -> adverb_phrase {% (data) => ["end phrase", id(data)] %}
+end_phrase -> prepositional_phrase {% (data) => ["end phrase", id(data)] %}
 
 #SUBCLAUSES
 
-property_subclause -> sentence {% (data) => ["property subclause", id(data)] %} 
+property_subclause -> statement {% (data) => ["property subclause", id(data)] %} 
 property_subclause -> tail {% (data) => ["property subclause", id(data)] %}
 
-property_subclause -> subordinating_conjunction _ sentence {% (data) => ["property subclause", clean(data)] %}
+property_subclause -> subordinating_conjunction _ statement {% (data) => ["property subclause", clean(data)] %}
 property_subclause -> subordinating_conjunction _ tail {% (data) => ["property subclause", clean(data)] %}
-property_subclause -> interrogative _ sentence {% (data) => ["property subclause", clean(data)] %}
+property_subclause -> interrogative _ statement {% (data) => ["property subclause", clean(data)] %}
 property_subclause -> interrogative _ tail {% (data) => ["property subclause", clean(data)] %}
 
 property_subclause -> property_subclause _ prepositional_phrase {% (data) => ["property subclause", clean(data)] %}
@@ -94,9 +100,9 @@ property_subclause -> property_subclause _ coordinating_conjunction _ property_s
 #verb_base -> head _ verbal {% (data) => clean(data) %}
 
 nominal_subclause -> tail {% (data) => ["nominal subclause", id(data)] %}
-nominal_subclause -> subordinating_conjunction _ sentence {% (data) => ["nominal subclause", clean(data)] %}
+nominal_subclause -> subordinating_conjunction _ statement {% (data) => ["nominal subclause", clean(data)] %}
 nominal_subclause -> subordinating_conjunction _ tail {% (data) => ["nominal subclause", clean(data)] %}
-nominal_subclause -> interrogative _ sentence {% (data) => ["nominal subclause", clean(data)] %}
+nominal_subclause -> interrogative _ statement {% (data) => ["nominal subclause", clean(data)] %}
 nominal_subclause -> interrogative _ tail {% (data) => ["nominal subclause", clean(data)] %}
 
 adverbial_subclause -> tail {% (data) => ["adverbial subclause", id(data)] %}
