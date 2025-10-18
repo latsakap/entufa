@@ -36,9 +36,11 @@ determiner -> "its" {%(data)=>["determiner",id(data)]%}
 determiner -> "our" {%(data)=>["determiner",id(data)]%}
 
 AS -> "as" {%(data)=>["AS",id(data)]%}
-NOT -> "not" {%(data)=>["NOT",id(data)]%}
+#NOT -> "not" {%(data)=>["NOT",id(data)]%}
 OF -> "of" {%(data)=>["OF",id(data)]%}
 TO -> "to" {%(data)=>["TO",id(data)]%}
+
+adverb -> "not" {%(data)=>["adverb",id(data)]%}
 
 DO -> "did" {%(data)=>["DO",id(data)]%}
 DO -> "didn't" {%(data)=>["DO",id(data)]%}
@@ -57,8 +59,6 @@ aux_verb -> "will" {%(data)=>["aux.verb",id(data)]%}
 aux_verb -> "won't" {%(data)=>["aux.verb",id(data)]%}
 aux_verb -> "would" {%(data)=>["aux.verb",id(data)]%}
 aux_verb -> "wouldn't" {%(data)=>["aux.verb",id(data)]%}
-
-adverb -> "not" {%(data)=>["adverb",id(data)]%}
 
 perfective -> "have" {%(data)=>["perfective.",id(data)]%}
 perfective -> "haven't" {%(data)=>["perfective",id(data)]%}
