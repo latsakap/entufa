@@ -10,12 +10,12 @@
 <body>
 <textarea name="input" id="input" style="width:80%;resize:none;" rows="8">this is a test</textarea>
 <button style="float:right;font-size:4.5vw;height:131px;width:18%;" onclick="process()">Parse</button>
-<button onclick="pageLeft()">Prev.</button><button onclick="pageRight()">Next</button><h2>Parse <span id="pageNum">*</span>/<span id="parseNum">*</span></h2> 
+<button onclick="pageLeft()">Prev.</button> <button onclick="pageRight()">Next</button> <button onclick="showTree()">Show Tree</button><h2>Parse <span id="pageNum">*</span>/<span id="parseNum">*</span></h2> 
 <p id="output" style="margin-left:10%;margin-right:10%;border:3px solid lightgray;">test</p>
-<p id="tree"></p>
+<p><ul id="tree"></ul></p>
 
 <script>
-let input, results, output;
+let input, results, output, raw, tree;
 let page = 0;
 
 function process() {
@@ -35,6 +35,7 @@ document.getElementById("output").innerHTML = error;
 function print() {
 document.getElementById("pageNum").innerHTML = page + 1;
 document.getElementById("parseNum").innerHTML = results.length;
+raw = results[page];
 output =  JSON.stringify(results[page])
 document.getElementById("output").innerHTML = output;
 }
@@ -49,6 +50,20 @@ function pageRight() {
 if (page + 1 < results.length) {
 page++;
 print()
+}}
+
+function showTree() {
+tree = grow(raw);
+document.getElementById("tree").innerHTML = tree;
+}
+
+function grow(node) {
+if (node.length > 2) {
+return "<li><ul>" + node[0] + ": " + grow(node[1]) + grow(node[2]) + "</ul></li>";
+} else if (Array.isArray(node[1])) {
+return "<li><ul>" + node[0] + ": " + grow(node[1]) + "</ul></li>";
+} else {
+return "<li>" + node[0] + ": " + node[1] + "</li>";
 }}
 </script>
 </body>

@@ -1,6 +1,6 @@
 #get list of ngram files
 files <- list.files("F:/NLP data/dependencies")
-written <- list.files("F:/GitHub/entufa/src/R/data") 
+written <- list.files("data") 
 files <- c(files[47:322], files[359:854])
 
 pairs <- read_lines("tables/pairs")
@@ -61,7 +61,7 @@ with_progress(
       }
     }
     
-    write_csv(unique_file_pairs, paste0("F:/GitHub/entufa/src/R/data/", x, ".csv"))
+    write_csv(unique_file_pairs, paste0("data/", x, ".csv"))
 #   ntfy_send(message = paste0(x, " complete"), topic = "latsakap")
     beep()
     
