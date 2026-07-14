@@ -1,1 +1,856 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a= aa ab
+ac ai ab af ag ad ae ah
+al an ar ap am aj aq ak ao ai
 ar at as au av ax aw ay
+ac ab aa az ay
+ac ad
+ad ae
+ae af ag
+al ai ak ah aj ag
+al
+am al an
+an
+ap an ao
+ar ap aq
+ar
+as ar
+at as
+au at
+av aw az ax au ay b=
+be ba bc b= bb bd bf bh bg
+bl br bo bi bp bs bn bk bm bj bh bq
+bu ba bs by bx bt bz bv bw
+ba
+ba
+ba bc be bb bd
+be
+be
+bi be bh bf bg
+bi bl bj bk
+bo bl bm bn
+bo
+bo br bq bp
+br
+br
+br bu bt bs
+by bu bv bw bx
+ca c= by bz
+cc ce ch ca cf cd cb cg
+ch cl co ci cm cn cj ck
+co
+cu cr co cv cs cy ct cp cw cx cz cq
+ca
+ca
+ca
+ca ce cd cb cc
+ce ch cg cf
+ch
+ch
+ch
+ci ck cl ch cj
+cl
+co cl cm cn
+co
+co
+co
+co
+co
+co
+co
+co
+cr co cq cp
+cr cu ct cs
+cu cy da d= cz cx cw cv
+de db di dc df dd da dh dg
+dp dx dr di da do dn dv du dk dl dy dm ds dj dq dt dw dz
+da
+da de dc dd db
+de
+de
+de
+de di dh df dg
+di
+di do dk dj dm dl dn
+do dr dp dq
+dr du dt ds
+du dy dv dw dx dz
+el em ed ee ef ec en ea ej ei eg e= eh ek eb
+es en ex er ev ep eu eo eq et ey ew ez
+ea ec eb ed
+ee el ed ei eh ef eg ek ej
+em el
+em en
+ep en eq er eo
+eu et es er
+ev ex ew eu
+ex ez ey
+fa f= fe fd fi fb ff fc fh fg
+fi fr fm fl fo fp fj fn fk fq
+fa fu fr fy fs ft fz fw fx fv
+fe fa fb fd fc
+fe fi ff fg fh
+fi
+fl fi fj fk
+fo fl fm fn
+fo
+fr fo fp fq
+fr fu ft fs
+g= fu ge ga gb gd gc fy fz fw fx fv
+gr go gi gl gw gu ge gp gt gy gh gg gk gs gm gn gv gf gj ga gx gz gq
+ga
+ge ga gd gb gc
+gi ge gh gf gg
+gi gl go gn gm gk gj
+go
+gr go gp gq
+gr
+gs gr gu gt
+ha he gy h= hb hc gw hd gv gz gu gx
+he ho hi hu hn hj hs hy hg hp hw hr hq hz hm hv hf ht hl hh hx hk
+ha
+ha
+ha he hc hb hd
+he
+he hg hi hf hh
+hi ho hn hm hl hj hk
+ho
+ho
+hu hs ho hr hq hp ht
+hy ia hu hz id i= ib ic hw hv hx
+in im ii il ih ig id ie if ik ij
+in ir is ip io iq
+ix iv ie ia id if ig iu it il ib ic ik ii is ij ih iz iw iy
+im il in
+in
+in
+in
+in io ir ip iq
+is ir it
+iv jm jo ja jg iw jk it jh jj je iu jc j= ix jd jl jb ji jn jf iy iz
+ja ju jr jt js jp jo jw jq jv jx jy jz
+je ja jl ji jn jh jo jm jf jc jj jd jk jb jg
+jr jo jq ju js jt jp
+ka ju k= jy jw jv jz jx
+ka kl ko kt kn kq kh kd ks ki ku km kw kr ke kv kg ky kc kp kb kz kf kx kj kk
+ke ka kc kd kb
+ki ke kh kg kf
+ki kn kl kj km kk
+kn kr ko kp kq
+ku l= la kr kw ky kx kt kv ks kz
+le li la lc ld lh lb lf ll lg lj lk
+la ll lo lt lu lw lv lr lp ly ln ls lm lx lq lz
+la
+la lc le lb ld
+le
+le
+li le lh lg lf
+li
+ll lo li lj ln lk lm
+lo lt ls lp lr lq
+lu ly lt lw lx lv lz
+ma m=
+me mi mc ma mb mh md mg mf
+mo ma mr ms mp mn mu my mw mm ml mj mi mt mk mv mz mx mq
+ma
+ma
+ma
+ma
+ma
+ma mc mb
+mc me md
+me
+me mi mg mh mf
+mi
+mi
+mi mo mm mk ml mj mn
+mo
+mr mo mt mu ms mp mq
+my mu mw mv mx
+n= na ne nh ng nd ni my nb nf nc mz
+no nl ns na ny nu nv nn nm ni nt nk nj nw np nz nr nx nq
+na ne nc nb nd
+ne
+ne ni no ng nl nm nf nj nk nn nh
+no
+no nu ns nt nr np nq
+of od nu oc ny oe o= ob nw oa nx nz nv
+om or ol op on ov oi ok ox oa oh ou of ot os oo ow og oj oy oz oq
+ob of oc oa od oe
+ol om ok og on oh of oi oj
+or op on oo oq
+or ot os
+ov oz ou ox p= ow ot oy
+pa pe pc ph pf p= pd pb pg
+pl ph pi po pp pm pn pk pj pq pr
+pu pr pt ps
+pa pu pw pv py px pz
+pa
+pa
+pe pa pc pd pb
+pe
+ph pe pg pf
+pi ph
+pl pi pk pj
+po pn pl pm
+po
+po pr pp pq
+pr
+pr
+pr
+pu pr ps pt
+pu py qu pw qi qc qa qb qp qe qs qo q= qt qr ql qd pz qm qq pv qf qw qh qk qj qn px qg qx qy qv qz
+qu r= qw qv qx qy qz
+rc re ra rb r= rd
+re ro rn ri rf rm rl rh rj rg rk
+ra ru rt ro rr rs rw rp rx ry rv rz rq
+ra rd rc rb
+re rd
+re
+re
+re
+re
+re ri rh rg rf
+ri ro rm rn rl rj rk
+ro
+rs ro ru rp rt rr rq
+ru ry rx rz rw rv
+sa sc s= se sd sb
+sh se si sf sg
+sp so st sr sn sl sm sk ss si sq sj
+st su
+sv sa sy su sw sx sz
+sa
+sc sa sb
+sc
+sc se sd
+se
+se
+se
+sh se sf sg
+sh si
+si
+si sk sm sl sj
+so sm sn
+so
+sp so
+st sq sr sp ss
+st
+st
+st
+su st
+su
+su sw sv
+sy t= sw sz sx
+te th ti td t= ta tf tc tg tb
+to tp tr tu tt ti tm tn ts tj tl tq tk
+ty ta tu tv tx tw tz
+ta te tb tc td
+te
+th te tf tg
+th
+th ti tl to tk tn tm tj
+to
+tr to tp tq
+tr
+tr tu ts tt
+tu ty ud tw uc tz u= uf ug ub ua uh ue tv tx
+ul um uk up us un ub ug ut uc ur ui ua uh ud ue uf uu uj uw uv ux uo uq uz uy
+up un uo
+us ut v= va ur up uy uw uz uu ux uv uq
+vi vc vp va ve vo vs vj vf vr vv vt vh vl vk vd vn vg vw vm vu vx vy vb vq vz
+va ve vb vd vc
+vi ve vh vf vg
+vo vi vl vu vr vt vn vy vv vw vp vs vq vm vx vj vk vz
+we wa wi wh wd w= wb wc wf wg
+wa wm wo ws wr wj wi wk wt wl wp wv wy wu wn ww wq wx wz
+wa
+wa we wb wc wd
+we wh wg wf
+wh wi
+wi
+wo wi wm wl wn wk wj
+wo wr wu wy wp wt wv ws wx ww wq
+xa yo xx ya xi xc y= xe xv yu x= xk ye yp ys yt yc yj xm xp xt yn xs xj wy xy yb xh xl xn xo yl xu ym xr yi yf yv xd xq yh xb yr yd yw xf xz xg xw yy yk yz yg yx wz yq
+yo ya yp ye yu yc ys yl yb ym yi yt yd yv yg yw yj yr yh yz yf yn yk yq yx yy
+zo zh za ze zi zu zm zf z= zs zb zn zq zr zd zk zl zx zv zy zp zz zc zj zg zt zw
+zy zw zv zz zx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a= as ap al aa ai ab am ak an ac ah ar ao ad af ag aq aj ae
+ab ax aa aw as av au ay at az
+ab ac
+ac
+ac
+ac
+ac
+ad ac
+ad
+ad
+ad ae af
+af ag
+ag
+ag ai ah ak al aj
+al
+al
+am al
+am
+an am
+an
+an
+ap an ao
+ap
+ap
+ap aq ar
+ar
+ar
+ar
+ar as
+as
+as
+as
+at as
+at
+at
+at au
+av au
+av ax aw
+ba b= ay ax az bp bu bz bx by bi bo bh bf bd be bk br bm bt bj bs bl bg bb bn bq bc bv bw
+ba
+ba
+be ba bc bb bd
+be
+be
+be
+be
+be
+be
+be bi bh bg bf
+bi
+bl bi bj bk
+bl bo bn bm
+bo
+bo
+bo
+br bp bo bq
+br
+br
+bu bs bt br
+bu
+bu by bv bw bx
+by
+ca by c= cd cl cm cf ct ch co ci cc cj cu bz ck cg cr cs cy cx ce cb cp cw cn cq cv cz
+ca
+ca
+ca
+ca
+ca
+ca
+ca ce cc cb cd
+ce
+ch ce cf cg
+ch
+ch
+ch
+ch
+ci ch
+ci cl ck cj
+cl
+cl
+cn cl co cm
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co cq cr cp
+cr
+cr
+ct cr cs cu
+cu
+cu cy cw cv cx
+da cy d= ds db dx dt dl df dn dp do dz cz dh dq dv dr dm de du dc dd dg di dw dk dj dy
+da
+de da db dc dd
+de
+de
+de
+de
+de
+de
+de
+de
+de
+de
+de
+de di dh df dg
+di
+di
+di
+di
+di
+di
+di
+di
+di
+di do dl dm dn dj dk
+do
+do dr dp dq
+dr
+dr
+du dr dt ds
+du dy e= dw ec dv dz eb ef dx eh ea eg ed ee
+ea en ev ep ei eq ex el es et ej ew em ez er ek eu ey eo eh
+ed ec eb ea
+ee ed ef eg
+el ei ek ej eg eh
+el em
+em
+en em
+en
+en
+en
+en
+en ep eo
+eq ep er
+es er
+es et
+et ev eu
+ev ex ew
+ex
+ex
+ex
+ex
+ex
+ex
+ex ey fa fo f= fb fq fd fu fw ez fr fe fx ft fm ff fs fh fj fv fp fi fc fn fl fk fy fg fz
+fa
+fa
+fa
+fa fe fc fd fb
+fe
+fe ff fh fg
+fi fh
+fi
+fi
+fl fi fj fk
+fl
+fl
+fl fo fm fn
+fo
+fo
+fo
+fo
+fo
+fr fo fp fq
+fr
+fr
+fu fr ft fs
+fu
+ga g= gx fu gs fy gm gt go gl fw fv gh gb gw fx gc gi gj fz gv ge gk gp gy gr gn gg gu gq gf gd gz
+ga
+ge gd ga gc gb
+gi ge gh gg gf
+gi gl gj gk
+gl gn gm go
+go
+go gr gp gq
+gr
+gr
+gr
+gu gr gv gs gt
+ha gy gw h= gz hg hf gx hc hv he hi hx hr ho hw hn ht hb hp hm hy hj hs hd hl hh hk hu hq gv hz
+ha
+ha
+ha
+ha he hc hd hb
+he
+he
+he
+hi hh he hg hf
+hi ho hm hn hk hl hj
+ho
+ho
+ho hu hr hp ht hs hq
+hu hy hv hw hx
+hy iu ib iq ia i= ic is ie it in iv iw ip io ii id ig ih im if ix il ir hz iz ik ij iy
+id ic if ie
+il ig ij ii ih ik if
+im il
+im
+im in
+in
+in
+in
+in
+in
+in
+in
+in
+in
+in
+in
+in
+in
+in
+in
+in io
+ir ip is io iq
+is
+is
+it iv j= iz is ja iu iw ix iy je jd jt js jb ju jl jk jx jh jo jv jf jc jp jj jr jm jw jq jz jn ji jy jg
+je ja ji jo jh jj jn jm jg jl jd jf jb jc jk
+jr jo ju jp jt js jq
+ju k= ke ka kb kw km kd jw kv kx kn kj jy jz ks jv kc ko kp ki jx kt kh kl kg ku kr kq kf kz kk ky
+ki ke kg kh kf
+ki kn km kl kk kj
+ky kn l= kr ku ko kt lc kv ks li kw lo la ln le lf kq lm kx ll lb kp ld lk lh lg kz lj
+la lo lu lv ls lr ly lq lw lx lp lt lz
+la
+la
+la lb le ld lc
+le
+le
+le
+le li lh lg lf
+li
+li
+li
+li
+li ln lo lm ll lj lk
+lo
+lo
+lo
+lx lw lo lu ly ls lt lp lr lv lq
+ma ly m= mr ml mm lz mw mo mv me mj mh mp mg mb mt mc md mk ms mu mn mi mf mq mx mz my
+ma
+ma
+ma
+ma
+ma
+ma
+ma me mb mc md
+me
+me
+me
+me
+me mi mg mf mh
+mi
+mi
+mi
+mm ml mo mi mn mk mj
+mo
+mo
+mo
+mo mu ms mr mt mp mq
+mu
+na mu my n= mv nh ng mz mw ni nc nt nq ns nw nn nr nd nm np no nb mx nl nj nf nu nz nv nk ne nx ny
+na
+ne nc na nb nd
+ne
+ne ni ng nh nf
+ni no nm nn nk nj nl
+no
+no nt ns nu nr np nq
+nu o= ny nv on or oa of ov nw nx nz oh oc oj ot ob ou od os om op oo oe ow oy ol ok oi oq og ox oz
+ob oa
+ob oc
+od of oe oc
+of
+of
+of
+of
+of
+of oh oi og
+om on oi ol ok oj
+on
+oo op on
+op
+or op oq
+or os
+ou ot os
+ou ov
+ov
+ow ox p= oy pa oz pl ph pt ps pw pk pu pc ov pg po pv pm pn pr pe pf pi pd pp pb pq pj px pz py
+pa
+pa
+pa
+pa
+pa
+pa
+pa pc pe pd pb
+pe
+pe
+pe
+pf pe ph pg
+ph
+pi ph
+pi pl pk pj
+pl
+pl
+pl
+po pl pn pm
+po
+po
+po
+po
+pr pp po pq
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr
+pr ps pu pt
+pu
+pu
+qu pu py qr qn qt qf pv qd qj qc q= ql qa qp px qo qi qk qv pw qq qb qh qe qg qm qs pz qy qx qw qz
+qu
+qu ra r= qz rt re rj rv rn rm qv rl rc rs rf qw rr rd ri ro rx qx rg rp rh ru rb rw rk ry qy rz rq
+ra
+ra
+ra re rd rc rb
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re
+re rh ri rg rf
+ri
+ri ro rn rm rk rl rj
+ro
+ro ru rq rp rt rr rs
+ru
+ry sa rv s= se ru rz rw st rx su ss sq sc sh sw sg sp sm si sb sf so sk sv sj sl sx sr sy sd sn sz
+sa
+sa
+sa
+sc sa sb
+sc
+sc se sd
+se
+se
+se
+se
+se
+se
+se
+se sh sg sf
+sh
+sh
+sh
+sh
+si sh
+si
+si
+si sk sj
+sl sk
+sl sm
+so sm sn
+so
+so
+so sp
+sp
+sp
+sp
+sp sq
+ss st sq sr
+st
+st
+st
+st
+st
+st
+st
+st
+st su
+su
+su
+su
+su
+su
+su
+su
+sw su sv
+sy sw sx
+ta sy t= to tr sz ts tp tm tj tu tb tw ti tv th tg tf tc tt te tn td tl tk tq ty tx tz
+ta
+ta
+ta te tb tc td
+te
+te
+te
+te th tf tg
+th
+th
+th
+th
+th ti
+ti
+ti to tn tl tm tj tk
+to
+to
+to
+to
+tr to tp tq
+tr
+tr
+tr
+tr
+tr
+tr tu tt ts
+tu tw tv
+ty ud ul ua tz ui uc u= uk tw ug tx ue uh uf ub um uq uj us up un ut ux ur uu uv uo uy uw uz
+un um
+un
+un
+un
+up un uo
+ur us up uq
+us ut
+va ut v= ux uu uy uv vs uz vu uw vv vo vm ve vw vl vq vt vc vd vi vj vx vp vn vk vg vb vh vf vr vy vz
+va vd vb vc ve
+ve
+vi ve vf vh vg
+vi
+vi vo vl vm vn vk vj
+vo vr vs vp vu vt vq
+wa vu vz wi w= vx vy vv wt wm wo vw we ww ws wl wp wh wj wu wy wr wb wz wc wk wf wq wd wn wv wg wx
+wa
+wa
+wa
+wa we wb wc wd
+we
+we wh wg wf
+wh
+wi wh
+wi
+wi
+wi
+wi wo wn wl wj wk wm
+wo
+wo wr wp wq
+wr ww x= wt wu wx wy ws wz wv
+xx xv xi ye ya y= xe x= xr xc xl xa xt yt yd xk yc xy xf xp xw xn xd xj xh xz xs xm yq xu xq yb xg xo ys xb yg yh yp yo yi yf yw ym yn yj yz yl yv yr yy yk yx yu
+yi ye za yo yl yu ys yr ze yv yt yn yh yy z= yk ym zb yp yg yz yf yj yw zc zd zm yx zo zr zf zs zp yq zl zv zi zg zn zw zj zh zz zk zu zt zy zx zq
+zo ze zm zu zl zi zr zy zh zn zv zg zp zt zw zs zf zz zj zq zx zk
+
+
