@@ -6,13 +6,34 @@
  <link rel="stylesheet" href="styles.css">
  <script src="nearley/lib/nearley.js"></script>
  <script src="src/parse.js"></script>
+ <style>
+ ul {
+	list-style: none outside none;
+	padding-left: 1em;
+	margin-left: 0;
+ }
+ 
+ li {
+	border-left-style: solid;
+	border-left-width: 0.2em;
+	padding-left: 0;
+ }
+ 
+ .tree {
+ 	border-left-style: solid;
+ }
+ 
+ .last {
+ 	border-left-style: none;
+ }
+ </style>
 </head>
 <body>
 <textarea name="input" id="input" style="width:80%;resize:none;" rows="8">this is a test</textarea>
 <button style="float:right;font-size:4.5vw;height:131px;width:18%;" onclick="process()">Parse</button>
 <button onclick="pageLeft()">Prev.</button> <button onclick="pageRight()">Next</button> <button onclick="showTree()">Show Tree</button><h2>Parse <span id="pageNum">*</span>/<span id="parseNum">*</span></h2> 
 <p id="output" style="margin-left:10%;margin-right:10%;border:3px solid lightgray;">test</p>
-<p><ul id="tree"></ul></p>
+<p><ul><li id="tree" class="last"></li></ul></p>
 
 <script>
 let input, results, output, raw, tree;
@@ -58,13 +79,20 @@ document.getElementById("tree").innerHTML = tree;
 }
 
 function grow(node) {
-if (node.length > 2) {
-return "<li><ul>" + node[0] + ": " + grow(node[1]) + grow(node[2]) + "</ul></li>";
-} else if (Array.isArray(node[1])) {
-return "<li><ul>" + node[0] + ": " + grow(node[1]) + "</ul></li>";
+let temp = "";
+for (let x in node) {
+if (x == 0) {
+temp = temp + "<span>" + node[x] + ": </span>";
+} else if (Array.isArray(node[x])) {
+if  (x == node.length - 1) {
+temp = temp + "<li class=\"last\"><ul>" + grow(node[x]) + "</ul></li>";
 } else {
-return "<li>" + node[0] + ": " + node[1] + "</li>";
+temp = temp + "<li><ul>" + grow(node[x]) + "</ul></li>";
+}} else {
+temp = temp + node[x];
 }}
+return(temp);
+}
 </script>
 </body>
 </html>
